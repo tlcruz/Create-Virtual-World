@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E58AB1BA-E13E-470D-8523-3616CC3A9A81}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CreateWorld</RootNamespace>
+    <AssemblyName>CreateWorld</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CameraEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CameraEditor.Designer.cs">
+      <DependentUpon>CameraEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentBuilder.cs" />
+    <Compile Include="CreateWorld.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateWorld.Designer.cs">
+      <DependentUpon>CreateWorld.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\InsertName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\InsertName.Designer.cs">
+      <DependentUpon>InsertName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\InsertNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\InsertNumber.Designer.cs">
+      <DependentUpon>InsertNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\InsertPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\InsertPosition.Designer.cs">
+      <DependentUpon>InsertPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ProblemLoadingModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ProblemLoadingModel.Designer.cs">
+      <DependentUpon>ProblemLoadingModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjectEditor.Designer.cs">
+      <DependentUpon>ObjectEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CameraEditor.resx">
+      <DependentUpon>CameraEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateWorld.resx">
+      <DependentUpon>CreateWorld.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InsertName.resx">
+      <DependentUpon>InsertName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InsertNumber.resx">
+      <DependentUpon>InsertNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\InsertPosition.resx">
+      <DependentUpon>InsertPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ProblemLoadingModel.resx">
+      <DependentUpon>ProblemLoadingModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjectEditor.resx">
+      <DependentUpon>ObjectEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\VirtualReality\VRLibrary\VRLibrary.csproj">
+      <Project>{4f051024-bbf9-40d5-bd4a-79004bd28403}</Project>
+      <Name>VRLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Viewer\Viewer\Viewer.csproj">
+      <Project>{8c2204d3-d843-4a17-a3af-69fe84edaea1}</Project>
+      <Name>Viewer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
