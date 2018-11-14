@@ -1,6 +1,6 @@
 # Create-Virtual-World
 
-Standalone Visual Studio Project in C# that helps the creation of virtual worlds to be used in the Virtual Reality Software
+Standalone Visual Studio Project in C# that helps the creation of virtual worlds to be used in the FlyVRena software
 
   - Includes the same architecture as Virtual Reality
   - Includes a basic GUI with a visualizer 
